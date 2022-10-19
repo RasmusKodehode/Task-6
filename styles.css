@@ -1,0 +1,48 @@
+h1 {
+    width: 250px;
+    background-color: blue;
+    color: red;
+    transition: all 2s;
+}
+
+h1:hover {
+    width: 500px;
+    border-radius: 50%;
+    background-color: red;
+    color: blue;
+}
+
+.trans {
+    height: 250px;
+    width: 250px;
+    font-size: 20px;
+    background-color: white;
+    transition: width 2s ease-out 500ms, height 2s ease-in 500ms, font-size 2s ease-out 500ms, background-color 2s ease-in 500ms, transform 10s linear 2s;
+}
+
+.trans:hover {
+    height: 500px;
+    width: 500px;
+    font-size: 40px;
+    background-color: black;
+    /*transform: rotate(1100deg);*/
+}
+
+.animate {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background-color: green;
+    animation-name: movingBox;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movingBox {
+    0% {background-color: green; left: 0%; top: 0px;}
+    25% {background-color: greenyellow; left: calc(50% - 200px); top: 0px;}
+    50% {background-color: yellow; left: calc(100% - 400px); top: 0px;}
+    75% {background-color: yellowgreen; left: calc(50% - 200px); top: 0px;}
+    100% {background-color: green; left: 0%; top: 0px;}
+}
